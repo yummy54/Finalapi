@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Restful API Example</title>
+</head>
+<body>
+    <h1> 인천 전체 주차장 </h1>
+    <form method='post' action='/' name='userForm' target="targetURL">
+    <input type="button" value="인천 전체 주차장 보기"
+     onclick="document.targetURL.location.href='/incheonparkinglot'">
+
+     <br>
+     <br>
+
+     <h1>서울 전체 주차장</h1>
+        <input type="button" value="서울 전체 주차장 보기"
+         onclick="document.targetURL.location.href='/seoulparkinglot'">
+
+     <br>
+     <br>
+
+`    <h1>서울 전체 주차장 검색</h1>
+        <select name="dong">
+            
+            <option>역삼동</option>
+            <option>개포동</option>
+            <option>청담동</option>
+            <option>신사동</option>
+            <option>논현동</option>
+            <option>압구정동</option>
+            <optione>세곡동</option>
+            <option>자곡동</option>
+            <option>율현동</option>
+            <option>일원동</option>
+            <option>수서동</option>
+            <option>도곡동</option>
+
+   
+        </select>
+            <input type="button" value="검색" onclick='document.targetURL.location.href="/findseoul/dong?dong="+document.userForm.dong.value'>
+     
+     <br>
+     <br>
+
+     <h1>서울 불법주정차 단속 CCTV 위치</h1>
+     <input type="button" value="서울 CCTV 위치 보기"
+     onclick="document.targetURL.location.href='/seoulcctv'">
+
+    <br>
+    <br>
+
+    <h1>인천 불법주정차 단속 CCTV 위치</h1>
+    <input type="button" value="인천 CCTV 위치 보기"
+    onclick="document.targetURL.location.href='/incheoncctv'">
+
+</form>
+    <iframe name=targetURL class="iframe-preview center" width="80%" height="500" style="border:none;">
+    </iframe>
+    
+</body>
+</html>
